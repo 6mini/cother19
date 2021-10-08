@@ -1,3 +1,9 @@
+<div style="text-align: center">
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F6mini%2FData-Pipeline-Project&count_bg=%23AAAAAA&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Hits&edge_flat=false)](https://github.com/6mini/Data-Pipeline-Project)
+
+</div>
+
 # Data-Pipeline-Project
 데이터 파이프라인을 구축하는 토이 프로젝트(feat. AWS PostgreSQL, DynamoDB, S3, Apache Spark)
 

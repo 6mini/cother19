@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open("lgb.pkl", "rb"))
+model = pickle.load(open("data/pkl/lgb.pkl", "rb"))
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
