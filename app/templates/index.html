@@ -9,6 +9,7 @@
   <meta name="keywords" content="global, template, html, sass, jquery">
   <meta name="author" content="Bucky Maler">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
 
@@ -26,7 +27,7 @@
     <div id="viewport" class="l-viewport">
       <div class="l-wrapper">
         <header class="header">
-          <a class="header--logo" href="#0">
+          <a class="header--logo" href="/">
             <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Global">
             <p>Co-ther 19</p>
           </a>
@@ -39,9 +40,9 @@
           <ul class="side-nav">
             <li class="is-active"><span>Home</span></li>
             <li><span>Intention</span></li>
-            <li><span>About</span></li>
+            <li><span>Dashboard</span></li>
             <li><span>Predict</span></li>
-            <li><span>Info</span></li>
+            <li><span>Social</span></li>
           </ul>
         </nav>
         <ul class="l-main-content main-content">
@@ -96,34 +97,34 @@
           </li>
           <li class="l-section section">
             <div class="work">
-              <h2>Selected work</h2>
+              <h2>Selected Dashboard</h2>
               <div class="work--lockup">
                 <ul class="slider">
                   <li class="slider--item slider--item-left">
-                    <a href="#0">
+                    <a href="https://public.tableau.com/app/profile/6mini/viz/CO-THER19_16338096560880/sheet12">
                       <div class="slider--item-image">
-                        <img src="{{ url_for('static', filename='img/work-victory.jpg') }}" alt="Victory">
+                        <img src="{{ url_for('static', filename='img/work-victory.png') }}" alt="Victory">
                       </div>
-                      <p class="slider--item-title">Victory</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                      <p class="slider--item-title">Relationship with Weather</p>
+                      <p class="slider--item-description">주요 기상과 확진자 수의 관계에 대한 분석</p>
                     </a>
                   </li>
                   <li class="slider--item slider--item-center">
-                    <a href="#0">
+                    <a href="https://public.tableau.com/app/profile/6mini/viz/CO-THER19/sheet11">
                       <div class="slider--item-image">
-                        <img src="{{ url_for('static', filename='img/work-metiew-smith.jpg') }}" alt="Metiew and Smith">
+                        <img src="{{ url_for('static', filename='img/work-metiew-smith.png') }}" alt="Metiew and Smith">
                       </div>
-                      <p class="slider--item-title">Metiew &amp; Smith</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                      <p class="slider--item-title">Meteorological Phenomenon</p>
+                      <p class="slider--item-description">기상현상 별 확진자 수에 대한 분석</p>
                     </a>
                   </li>
                   <li class="slider--item slider--item-right">
-                    <a href="#0">
+                    <a href="https://public.tableau.com/app/profile/6mini/viz/CO-THER19_16338097289020/sheet13">
                       <div class="slider--item-image">
-                        <img src="{{ url_for('static', filename='img/work-alex-nowak.jpg') }}" alt="Alex Nowak">
+                        <img src="{{ url_for('static', filename='img/work-alex-nowak.png') }}" alt="Alex Nowak">
                       </div>
-                      <p class="slider--item-title">Alex Nowak</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                      <p class="slider--item-title">Ground Temperature</p>
+                      <p class="slider--item-description">특성 중요도가 높았던 지중온도와<br>확진자 수의 관계에 대한 분석</p>
                     </a>
                   </li>
                 </ul>
@@ -242,9 +243,9 @@
   <ul class="outer-nav">
     <li class="is-active">Home</li>
     <li>Intention</li>
-    <li>About</li>
+    <li>Dashboard</li>
     <li>Predict</li>
-    <li>Info</li>
+    <li>Social</li>
   </ul>
 </div>
 

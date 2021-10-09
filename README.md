@@ -5,7 +5,7 @@
 </div>
 
 # Data-Pipeline-Project
-데이터 파이프라인을 구축하는 토이 프로젝트(feat. AWS PostgreSQL, DynamoDB, S3, Apache Spark)
+데이터 파이프라인을 구축하는 토이 프로젝트(feat. AWS PostgreSQL, Tableau, Flask)
 
 ## 10. 6. 0300i 
 - start
@@ -19,3 +19,9 @@
 - model pickle 이용 import 및 export
 - html template 적용
 - 모델 활용 예측값 API 구현
+
+## 10.10. 0619i
+- html, css 수정
+- Dashboard 개발 및 배포 후 웹사이트 적용
+- GUI 최종 수정
+- favicon 추가
