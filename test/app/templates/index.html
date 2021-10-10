@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CO-THER 19</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Global">
+    <p>CO-THER 19</p>
+  </a>
+  <p class="device-notification--message">CO-THER 19 has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="/">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Global">
+            <p>Co-ther 19</p>
+          </a>
+          
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span>Intention</span></li>
+            <li><span>Dashboard</span></li>
+            <li><span>Predict</span></li>
+            <li><span>Social</span></li>
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>서울특별시<br>기상 별 확진자 수<br>예측 프로그램</h1>
+                {% if pred %}
+                <h1 class="text-center mt-1">입력 기상에 따른 서울시<br>예상 확진자 수: {{ pred }}명</h1>
+                {% endif %}
+                <img src="{{ url_for('static', filename='img/introduction-visual.png') }}" alt="Welcome">
+              </div>
+              <div class="intro--options">
+                <a href="https://github.com/6mini/Data-Pipeline-Project">
+                  <h3>CodeStates Project</h3>
+                  <p>이 웹사이트는 Codestates의 Section 3 Data Pipeline 구축 Project를 위해 만들어 졌습니다.<br>[Github repository 바로가기]</p>
+                </a>
+                <a href="https://www.weather.go.kr/w/weather/forecast/short-term.do">
+                  <h3>COVID-19 &amp; Weather</h3>
+                  <p>여러가지 기상 요인으로 서울시의 코로나 확진자 수의 예측모델을 구현했습니다. 사용 변인은 기상 예보로 확인 할 수 있습니다.<br>[기상청 날씨누리 바로가기]</p>
+                </a>
+                <a href="#0">
+                  <h3>LightGBM</h3>
+                  <p>기계 학습에서 LightGBMRegressor를 이용해 모델링하였습니다. LGBM은 강력한 회귀 예측 도구입니다.<br>[모델링 과정 포스팅 바로가기] </p>
+                </a>
+              </div>
+            </div>
+          </li>
+          
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>개발자<br>서비스<br>기획<br>의도</h2>
+                <div>
+                  코로나 바이러스가 지속적으로 심해지는 가운데,<br>감염에 대한 두려움도 커지고 있습니다.<br>
+                  기상요인으로 인한 코로나 바이러스의 확진자 수를 예측하여<br>감염을 완화하는데에 조금이나마 도움이 되길 바라는 마음으로 기획하였습니다.
+                </div>
+                <img src="{{ url_for('static', filename='img/about-visual.png') }}" alt="About Us">
+              </div>
+              <div class="about--options">
+                <a href="https://namu.wiki/w/%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%EA%B0%90%EC%97%BC%EC%A6%9D-19">
+                  <h3>COVID-19</h3>
+                </a>
+                <a href="http://ncov.mohw.go.kr/">
+                  <h3>homepage</h3>
+                </a>
+                <a href="https://ncvr2.kdca.go.kr/">
+                  <h3>Vaccination</h3>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="work">
+              <h2>Selected Dashboard</h2>
+              <div class="work--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-left">
+                    <a href="https://public.tableau.com/app/profile/6mini/viz/CO-THER19_16338096560880/sheet12">
+                      <div class="slider--item-image">
+                        <img src="{{ url_for('static', filename='img/work-victory.png') }}" alt="Victory">
+                      </div>
+                      <p class="slider--item-title">Relationship with Weather</p>
+                      <p class="slider--item-description">주요 기상과 확진자 수의 관계에 대한 분석</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-center">
+                    <a href="https://public.tableau.com/app/profile/6mini/viz/CO-THER19/sheet11">
+                      <div class="slider--item-image">
+                        <img src="{{ url_for('static', filename='img/work-metiew-smith.png') }}" alt="Metiew and Smith">
+                      </div>
+                      <p class="slider--item-title">Meteorological Phenomenon</p>
+                      <p class="slider--item-description">기상현상 별 확진자 수에 대한 분석</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="https://public.tableau.com/app/profile/6mini/viz/CO-THER19_16338097289020/sheet13">
+                      <div class="slider--item-image">
+                        <img src="{{ url_for('static', filename='img/work-alex-nowak.png') }}" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">Ground Temperature</p>
+                      <p class="slider--item-description">특성 중요도가 높았던 지중온도와<br>확진자 수의 관계에 대한 분석</p>
+                    </a>
+                  </li>
+                </ul>
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                </div>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="contact">
+              <div class="contact--lockup">
+                <div class="modal">
+                  <div class="modal--information">
+                    <section>
+                      <h2 class="h3 text-center mb-5">서울 확진자 수 예측하기</h2>
+                      <div class="row wow fadeIn">
+                        <div class="work-request--information">
+                          <form action="/" method="post">
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="avgTa" required>
+                              <label for="formGroupExampleInput">평균기온</label>
+                            </div>
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="minTa" required>
+                              <label for="formGroupExampleInput">최저기온</label>
+                            </div>
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="maxTa" required>
+                              <label for="formGroupExampleInput">최고기온</label>
+                            </div>
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="avgRhm" required>
+                              <label for="formGroupExampleInput">습도</label>
+                            </div>
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="avgWs" required>
+                              <label for="formGroupExampleInput">풍속</label>
+                            </div>
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="sumRn" required>
+                              <label for="formGroupExampleInput">강수량</label>
+                            </div>
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="ddMes" required>
+                              <label for="formGroupExampleInput">적설량</label>
+                            </div>
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="avgTca" required>
+                              <label for="formGroupExampleInput">전운량</label>
+                            </div>
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="sumSsHr" required>
+                              <label for="formGroupExampleInput">일조시간</label>
+                            </div>
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="avgPs" required>
+                              <label for="formGroupExampleInput">해면기압</label>
+                            </div>
+                            <div class="information-name" style="width: 200px;margin-bottom: 10px;">
+                              <input type="text" name="avgTd" required>
+                              <label for="formGroupExampleInput">이슬점온도</label>
+                            </div>
+                            <button type="submit" style="position: inherit;transform: inherit;-webkit-transform: inherit;margin-top: 20px;padding: 0 20px;line-height: 30px;text-decoration: none;color: #fff;font-weight: 700;text-transform: uppercase;background-color: #0f33ff;border: none;">Predict</button>
+                          </form>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="hire">
+              <h2>About me</h2>
+
+              <button onclick="location.href='https://github.com/6mini'" style="position: inherit;transform: inherit;-webkit-transform: inherit;margin-top: 20px;padding: 0 20px;line-height: 30px;text-decoration: none;color: #fff;font-weight: 700;text-transform: uppercase;background-color: #0f33ff;border: none;margin-right: 200px;margin-left: 200px;">GitHub</button>
+
+              <button onclick="location.href='https://6mini.github.io/'" style="position: inherit;transform: inherit;-webkit-transform: inherit;margin-top: 20px;padding: 0 20px;line-height: 30px;text-decoration: none;color: #fff;font-weight: 700;text-transform: uppercase;background-color: #0f33ff;border: none;margin-right: 200px;margin-left: 200px;">Blog</button>
+              
+              <button onclick="location.href='mailto:real6mini@gmail.com'" style="position: inherit;transform: inherit;-webkit-transform: inherit;margin-top: 20px;padding: 0 20px;line-height: 30px;text-decoration: none;color: #fff;font-weight: 700;text-transform: uppercase;background-color: #0f33ff;border: none;margin-right: 200px;margin-left: 200px;margin-bottom: 50px;">Mail</button>
+
+              <h2>Your opinion is of great help to me</h2>
+              <div id="disqus_thread"></div>
+                <script>
+                    (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://co-ther-19.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+              <!-- checkout formspree.io for easy form setup -->
+              
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Home</li>
+    <li>Intention</li>
+    <li>Dashboard</li>
+    <li>Predict</li>
+    <li>Social</li>
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="{{ url_for('static', filename='js/functions-min.js') }}"></script>
+</body>
+</html>
