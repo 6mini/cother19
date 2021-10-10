@@ -868,7 +868,7 @@ body {
 		height: 360px
 	}
 	.intro--banner h1 {
-		font-size: 55px
+		font-size: 44px
 	}
 	.intro--banner img {
 		display: none
@@ -1673,8 +1673,8 @@ body {
 	}
 	.work-request--information .information-name,
 	.work-request--information .information-email {
-		height: 40px;
-		font-size: 24px
+		height: 32px;
+		font-size: 18px
 	}
 }
 
