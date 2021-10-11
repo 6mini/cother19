@@ -36,7 +36,7 @@
 
 - [Data Pipeline 구축 Project] 기상으로 알아보는 코로나 확진자 수 예측 프로그램<br>
 (feat. AWS PostgreSQL, LGBM, Flask, Tableau)
-- [서비스 바로가기](https://cother.herokuapp.com/)
+- [웹 사이트 바로가기](https://cother.herokuapp.com/)
 - [블로그 포스팅 바로가기](https://6mini.github.io/project/2021/10/06/Cother/)
 
 ## History
@@ -62,14 +62,35 @@
 
 ### 10.10. 1542i
 - 모바일 친화 작업
-- 최종 배포 및 git 정리
+- Heroku 이용 최종 배포 및 git 정리
 - 404 page 추가
 
 ### 10.11. 2209i
 - AWS EC2 Crontab 이용 DB 저장 자동화
+- 404 title 수정
+- README.md 설명 추가
 
 ## Indroduction
 
+### Pipline
+
+![Project3 004](https://user-images.githubusercontent.com/79494088/136806298-98343035-00ac-4a35-85d9-2167514655ed.jpeg)
+
+- 공공데이터: 일별 기상 데이터, 확진자 수 데이터 ⇨ AWS RDS PostgreSQL
+  - AWS EC2 Crontab 이용 DB 저장 자동화
+- BI: Tableau, Tableau Public(웹사이트 내 링크)
+- Web Framework: Python Flask
+
+### Machine Learning
+
+![Project3 005](https://user-images.githubusercontent.com/79494088/136805363-a15f4472-06a5-477e-974e-ae885104ab83.jpeg)
+
+- 코로나 확진자수가 유의하게 존재하는 기간은 그렇게 오래 되지 않았기 때문에 지금으로부터 1년 전까지의 데이터만 사용
+- **59가지의 기상 데이터를 사용 시 R²: 0.9**
+- 기상 입력값을 받아 확진자 예측을 해야하기 때문에, 59가지나 되는 기상을 사용할 수 없다.<br>
+또한 기상예보에서 알려주는 데이터가 아닐 경우, 서비스의 유용력이 굉장히 떨어질거라 생각해서 기상예보로 확인할 수 있는 7가지의 기상 데이터만 사용
+- **7가지의 기상 데이터를 사용 시 R²: 0.5**
+- 모두 사용했을때보다 성능이 굉장히 아쉬웠지만, 그래도 0.5라는 수치는 강력하진 않지만 중간정도의 효과 크기로 간주되기 때문에 이 모델로 웹서비스를 진행
 
 
 

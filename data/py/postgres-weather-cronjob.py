@@ -5,7 +5,7 @@ import logging
 import sys
 import json
 
-key = 'sMRl46KNdRk8LSFsSh1zJ9rfus4PM8hNLt1oOqVD6yhuPCagOupZN4U12BNVJobHswlBfVSV%2BfC4x3BSzaBnzw%3D%3D'
+key = ''
 yesterday = (datetime.today() - timedelta(1)).strftime("%Y%m%d")
 startDate = yesterday
 endDate = yesterday
@@ -16,7 +16,7 @@ host = "covid.cjwptwa04yyi.ap-northeast-2.rds.amazonaws.com"
 port = 5432
 username = "sixmini"
 database = "postgres"
-password = "12345678"
+password = ""
 
 
 def main():
