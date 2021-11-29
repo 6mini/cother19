@@ -24,8 +24,8 @@
 
 - [Data Pipeline 구축 Project] 기상으로 알아보는 코로나 확진자 수 예측 프로그램<br>
 (feat. AWS PostgreSQL, LGBM, Flask, Tableau)
-- [웹 사이트 바로가기](https://cother.herokuapp.com/)
-- [블로그 포스팅 바로가기](https://6mini.github.io/project/2021/10/06/Cother/)
+- [COTHER-19 웹 사이트 바로가기](https://cother.herokuapp.com/)
+- [COTHER-19 블로그 포스팅 바로가기](https://6mini.github.io/project/2021/10/06/Cother/)
 
 ## History
 
@@ -62,7 +62,7 @@
 
 ### Pipline
 
-![Project3 004](https://user-images.githubusercontent.com/79494088/136806298-98343035-00ac-4a35-85d9-2167514655ed.jpeg)
+![윤민쓰 의뢰 001](https://user-images.githubusercontent.com/79494088/143800098-30dd0c0f-d9b1-4ae5-8480-50aa45499c23.png)
 
 - 공공데이터: 일별 기상 데이터, 확진자 수 데이터 ⇨ AWS RDS PostgreSQL
   - AWS EC2 Crontab 이용 DB 저장 자동화
