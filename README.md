@@ -10,6 +10,7 @@
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=Tableau&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a>
@@ -37,12 +38,12 @@
 ![윤민쓰 의뢰 001](https://user-images.githubusercontent.com/79494088/143800098-30dd0c0f-d9b1-4ae5-8480-50aa45499c23.png)
 
 - [공공데이터: 일별 기상 데이터, 확진자 수 데이터 ⇨ AWS RDS PostgreSQL](https://6mini.github.io/project/2021/10/06/cother1/)
-  - [AWS EC2 Crontab 이용 DB 저장 자동화](https://6mini.github.io/project/2021/10/10/cother5/)
-- [BI: Tableau, Tableau Public(웹사이트 내 링크)](https://6mini.github.io/project/2021/10/09/cother4/)
-- [웹 프레임워크로 플라스크(Flask)이용, 헤로쿠(Heroku)로 배포](https://6mini.github.io/project/2021/10/08/cother3/)
+  - [AWS EC2 Crontab 이용 DB 저장 자동화](https://6mini.github.io/project/2021/10/10/Cother5/)
+- [BI: Tableau, Tableau Public(웹사이트 내 링크)](https://6mini.github.io/project/2021/10/09/Cother4/)
+- [웹 프레임워크로 플라스크(Flask)이용, 헤로쿠(Heroku)로 배포](https://6mini.github.io/project/2021/10/08/Cother3/)
 
 # 머신러닝 모델링
-- [머신러닝 모델링 과정 포스팅 바로가기](https://6mini.github.io/project/2021/10/07/cother2/)
+- [머신러닝 모델링 과정 포스팅 바로가기](https://6mini.github.io/project/2021/10/07/Cother2/)
 
 ![Project3 005](https://user-images.githubusercontent.com/79494088/136805363-a15f4472-06a5-477e-974e-ae885104ab83.jpeg)
 
@@ -54,7 +55,7 @@
 - 모두 사용했을때보다 성능이 굉장히 아쉬웠지만, 그래도 0.5라는 수치는 강력하진 않지만 중간정도의 효과 크기로 간주되기 때문에 이 모델로 웹서비스를 진행했다.
 
 # 간략 회고
-- [전체 회고 보러가기](https://6mini.github.io/project/2021/10/11/cother6/)
+- [전체 회고 보러가기](https://6mini.github.io/project/2021/10/11/Cother6/)
 - 머신러닝을 접목해서 서비스를 한다는 것 자체가 개인적으로 사고를 높이는데 한단계 발전 할 수 있었던 프로젝트였다고 생각한다.
 - 어떤 학습을 시켜야하는지 문제정의를 하는 것부터, 어떤 데이터를 어떻게 파이프라인으로 꾸려야하는지를 생각하는게 까다롭고 힘들다는 것을 느꼈다.
 - 분석을 하면서도 느꼈고 도메인에 대해 탐색하면서도 느낀 점이지만 코로나가 기상과의 연관성이 크지 않아서 사실 서비스에대한 유용성을 스스로도 크게 느끼지 못한 것 같다.
